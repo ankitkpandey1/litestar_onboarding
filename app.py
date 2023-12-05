@@ -1,5 +1,6 @@
 from litestar import Litestar, get
 from routers import future_router
+from middlewares import RequestMiddleware
 
 @get("/")
 async def hello() -> str:
@@ -9,4 +10,4 @@ async def hello() -> str:
 
 
 
-app = Litestar(route_handlers=[hello, future_router])
+app = Litestar(route_handlers=[hello, future_router], middleware=[RequestMiddleware])
