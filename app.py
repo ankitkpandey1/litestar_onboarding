@@ -1,9 +1,9 @@
 from litestar import Litestar, get
 from routers import future_router
 
-@get("/")
+@get("/ping")
 async def hello() -> str:
-    return "Hello, world!"
+    return "pong!"
 
 
 

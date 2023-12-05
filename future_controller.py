@@ -10,6 +10,6 @@ future_maps = {
 class FutureController(Controller):
 
     @get(path="/{future_id:int}")
-    async def get_future_id_status(self, future_id: int) -> str:
-        return "tt"
+    async def get_future_id_status(self, future_id: int):
+        ...
  
